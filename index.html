@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speech fighter</title>
+  <link rel="stylesheet" type="text/css" href="css/site.css">
+
+</head>
+<body id="wrapper">
+  <audio id="background-music" class="hidden" src="assets/audio/mess.mp3" loop="true" autoplay="true"></audio>
+  <audio id="sfx" class="hidden"></audio>
+
+  <div id="character-picker">
+  <h2>Pick your character</h2>
+    <div class="player-card player-hulk"><h3>A</h3></div>
+    <div class="player-card player-bob"><h3>B</h3></div>
+    <div class="player-card player-harley"><h3>C</h3></div>
+  </div>
+
+  <div id="winstate" class="fullscreen hidden">
+    <img src="assets/comictext/illustrations-07.svg">
+  </div>
+
+  <div id="losestate" class="fullscreen hidden">
+    <img src="assets/comictext/illustrations-06.svg">
+  </div>
+
+  <nav class="cf">
+    <div id="player-health">
+      HP
+      <div class="bar"><div class="inner-bar"></div></div>
+    </div>
+    <h1 id="title">Super Speech Fighter</h1>
+    <div id="opponent-health">
+      HP
+      <div class="bar"><div class="inner-bar"></div></div>
+    </div>
+  </nav>
+
+  <div id="zone-one"></div>
+  <div id="zone-two"></div>
+  <div id="zone-three"></div>
+  <div id="zone-four"></div>
+
+  <div id="player" class="player"></div>
+
+  <div class="opponent"></div>
+
+  <div class="command-list">
+    <h3>Controls: SAY - Punch! Kick! Block! Jab! or Jump!</h3>
+  </div>
+
+  <div id="readystate" class="popup">
+    <h2>Ready Player One?</h2>
+    <button onclick="SSF.start()" class="btn--ready">Ready!</button>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+  <script type="text/javascript" src="js/speech-fighter.js"></script>
+</body>
+</html>
